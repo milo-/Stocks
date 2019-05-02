@@ -7,7 +7,7 @@ A stock news app, showing the most interesting US stocks. It's built using Swift
 ### Running
 1. Clone the repo
 2. Open Stocks.xcworkspace in Xcode
-3. Update the token in IEXEndpoint.swift, to your secret token from [IEX Cloud Api](https://iexcloud.io/docs/api/#authentication)
+3. Update the token in [IEXEndpoint.swift](Stocks/IEXCloudApi/IEXEndpoint.swift), to your secret token from [IEX Cloud Api](https://iexcloud.io/docs/api/#authentication)
 3. Run!
 
 ### Credits
