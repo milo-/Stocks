@@ -9,7 +9,7 @@
 import Foundation
 
 struct IEXEndpoint<ResponseType: Codable>: Endpoint {
-    let token = "" // 🤐 Nothing to see here...
+    let token = "sk_f402acfd5fa84a29a3c635316610ded9" // 🤐 Nothing to see here...
     let host = "cloud.iexapis.com"
     let basePath: String? = "/stable"
     

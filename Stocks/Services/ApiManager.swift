@@ -24,42 +24,24 @@ struct ApiManager {
         
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 20)
         request.httpMethod = endpoint.method.rawValue
-        
-        return Single.create { single in
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let httpResponse = response as? HTTPURLResponse, let data = data else {
-                    single(.error(ApiError.noResponse))
-                    return
-                }
-                
-                debugPrint(httpResponse)
-                
-                guard error == nil else {
-                    debugPrintOptional(error)
-                    single(.error(error!))
-                    return
-                }
 
-                guard 200..<300 ~= httpResponse.statusCode else {
-                    single(.error(ApiError.invalidResponse(httpResponse)))
-                    return
-                }
-
+        return URLSession
+            .shared
+            .rx
+            .data(request: request)
+            .map { data in
                 do {
-                    let result = try decoder.decode(T.ResponseType.self, from: data)
-                    single(.success(result))
+                    return try decoder.decode(T.ResponseType.self, from: data)
                 } catch {
                     debugPrint(error)
-                    single(.error(ApiError.couldNotParseJSON))
+                    throw ApiError.couldNotParseJSON
                 }
             }
-            
-            task.resume()
-            
-            return Disposables.create {
-                task.cancel()
+            .catchError { error in
+                debugPrint(error)
+                return .error(error)
             }
-        }
+            .asSingle()
     }
 }
 

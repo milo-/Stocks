@@ -15,7 +15,6 @@ protocol AppCoordinatorDelegate: class {
 }
 
 class AppCoordinator: AppCoordinatorDelegate {
-    
     let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

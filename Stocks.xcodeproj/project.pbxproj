@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2594436E775E1F6375FD0280 /* Pods_Stocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822D02DC281CDEC1165DF593 /* Pods_Stocks.framework */; };
 		2658D61E22708F370032BCC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658D61D22708F370032BCC1 /* AppDelegate.swift */; };
-		2658D62022708F370032BCC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658D61F22708F370032BCC1 /* ViewController.swift */; };
 		2658D62522708F380032BCC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2658D62422708F380032BCC1 /* Assets.xcassets */; };
 		2658D62822708F380032BCC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2658D62622708F380032BCC1 /* LaunchScreen.storyboard */; };
 		2658D63322708F380032BCC1 /* StocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658D63222708F380032BCC1 /* StocksTests.swift */; };
@@ -77,7 +76,6 @@
 		1C6334BDB5C02C181FA821E8 /* Pods-StocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StocksTests.release.xcconfig"; path = "Target Support Files/Pods-StocksTests/Pods-StocksTests.release.xcconfig"; sourceTree = "<group>"; };
 		2658D61A22708F370032BCC1 /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2658D61D22708F370032BCC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2658D61F22708F370032BCC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2658D62422708F380032BCC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2658D62722708F380032BCC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2658D62922708F380032BCC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 				2658D6642270EF200032BCC1 /* IEXCloudApi */,
 				2658D64B22708F450032BCC1 /* Models */,
 				2658D61D22708F370032BCC1 /* AppDelegate.swift */,
-				2658D61F22708F370032BCC1 /* ViewController.swift */,
 				2658D62422708F380032BCC1 /* Assets.xcassets */,
 				2658D62622708F380032BCC1 /* LaunchScreen.storyboard */,
 				2658D62922708F380032BCC1 /* Info.plist */,
@@ -337,7 +334,6 @@
 		265A1807227889B10025B3D1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				26883FC0227AD44B0048170C /* Company */,
 				265A1809227889C00025B3D1 /* News */,
 				265A1808227889B90025B3D1 /* StockListing */,
 			);
@@ -374,13 +370,6 @@
 				26A9A8042278E156009150A0 /* CompanyViewController.swift */,
 				265A17E42276F58A0025B3D1 /* CompanyViewModel.swift */,
 				265A18142278D9C80025B3D1 /* CompanyInfoViewController.swift */,
-			);
-			path = Company;
-			sourceTree = "<group>";
-		};
-		26883FC0227AD44B0048170C /* Company */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -687,7 +676,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2658D6612270D0670032BCC1 /* StockListingViewController.swift in Sources */,
-				2658D62022708F370032BCC1 /* ViewController.swift in Sources */,
 				265A17EC22770CCB0025B3D1 /* AppCoordinator.swift in Sources */,
 				26A9A8032278DB68009150A0 /* IEXCompany.swift in Sources */,
 				265A17D42271D8540025B3D1 /* StockListingViewCell.swift in Sources */,
